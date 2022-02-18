@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+    />
+
+    <title>Movie Card</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      background: url(./ge.jpg) no-repeat center center fixed;
+      background-size: cover;
+    }
+    .movie {
+      padding: 25px 30px;
+      max-width: 350px;
+
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px) saturate(180%);
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.75);
+      border-radius: 15px;
+    }
+
+    .card {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 0 20px 2px rgba(42, 73, 69, 0.6);
+    }
+    .title {
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #3f4263;
+      letter-spacing: 8px;
+    }
+    .stars {
+      text-align: center;
+      margin: 5px 0 5px;
+      color: #ecaa3a;
+      font-size: 32px;
+      letter-spacing: 8px;
+    }
+
+    .details {
+      font-family: "raleway", sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      font-weight: 700;
+      word-spacing: 1px;
+    }
+  </style>
+  <body>
+    <div class="movie">
+      <div class="card">
+        <img src="./bg.jpg" alt="poster" />
+
+        <div class="title">GEHRAIYAAN</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <span class="details">
+          A woman finds herself at a crossroads in life. Her six year
+          relationship has grown monotonous and her career seems to have hit a
+          roadblock. However, the arrival of her cousin forces her to confront a
+          troubled past.
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
