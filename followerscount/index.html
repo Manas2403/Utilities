@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Followers</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/08ddc2f0e6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #08080a;
+      gap: 4rem;
+    }
+    /*.logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 8px;
+    }*/
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+    }
+    .count {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+    /* credits to csscoding_ on instagram  */
+    .fa-brands {
+      font-size: 4rem;
+      color: #fff;
+      box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+        2px 2px 10px #00000080, 2px 2px 3px #00000080,
+        inset 2px 2px 2px 10px #00000080, inset 2px 2px 2px 10px #00000080,
+        inset 2px 2px 2px 10px #00000080, inset 2px 2px 2px 10px #00000080;
+      border-radius: 29px;
+      padding: 11px 19px;
+      margin: 10px 20px;
+      animation: animate 3s linear infinite;
+      text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+        0 0 200px #0072ff;
+    }
+    .app {
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+    }
+    @media screen and (max-width: 800px) {
+      body {
+        flex-direction: column;
+      }
+    }
+    .fa-instagram {
+      animation-delay: 0.1s;
+    }
+    .fa-faceboook {
+      animation-delay: 0.3s;
+    }
+    .fa-youtube {
+      animation-delay: 0.7s;
+    }
+    @keyframes animate {
+      from {
+        filter: hue-rotate(0deg);
+      }
+      to {
+        filter: hue-rotate(360deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <i class="fa-brands fa-instagram"></i>
+      <div class="count" data-count="2538"></div>
+      <span class="app">Instagram Followers</span>
+    </div>
+    <div class="container">
+      <i class="fa-brands fa-facebook"></i>
+      <div class="count" data-count="97384"></div>
+      <span class="app">Facebook Followers</span>
+    </div>
+    <div class="container">
+      <i class="fa-brands fa-youtube"></i>
+      <div class="count" data-count="857"></div>
+      <span class="app">Youtube Subscribers</span>
+    </div>
+  </body>
+  <script>
+    const counter = document.querySelectorAll(".count"); //give a node-list containing el of same class
+    counter.forEach((el) => {
+      el.innerText = "0";
+      const increaseCount = function () {
+        const target = +el.getAttribute("data-count"); //returns the value in data-count
+        const c = +el.innerText;
+        const increase = target / 100; //will determine by how much it will incresase in 1.2ms
+        if (target > c) {
+          el.innerText = `${Math.floor(c + increase)}`;
+          setTimeout(increaseCount, 1.2); //timwout function will call increaseCOunt again and again till target=c
+        } else {
+          el.innerText = target;
+        }
+      };
+      increaseCount();
+    });
+  </script>
+</html>
