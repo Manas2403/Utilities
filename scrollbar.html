@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Custom Scrollbars</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #2c2c2b;
+    }
+    p {
+      color: white;
+      font-size: 48px;
+      justify-self: center;
+      font-family: "Merienda", cursive;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .scrollbar {
+      height: 400px;
+      width: 100px;
+      background: #f5f5f5;
+      overflow-y: scroll;
+    }
+    .overflow {
+      min-height: 600px;
+    }
+
+    /* scrollbar 1 */
+    .scroll-1::-webkit-scrollbar {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+      width: 12px;
+      background: #f5f5f5;
+      border-radius: 10px;
+    }
+    .scroll-1::-webkit-scrollbar-thumb {
+      background: linear-gradient(60deg, #667eea, #764ba2);
+
+      border-radius: 10px;
+    }
+    /* scrollbar 2 */
+    .scroll-2::-webkit-scrollbar {
+      width: 15px;
+    }
+    .scroll-2::-webkit-scrollbar-track {
+      background-color: #3e497a;
+      border-radius: 50px;
+    }
+    .scroll-2::-webkit-scrollbar-thumb {
+      background: linear-gradient(#ffdd00, #fbb034);
+      border-radius: 50px;
+    }
+    /* scrollbar-3 */
+    .scroll-3::-webkit-scrollbar {
+      width: 8px;
+    }
+    .scroll-3::-webkit-scrollbar-track {
+      background: #f1c0db;
+    }
+    .scroll-3::-webkit-scrollbar-thumb {
+      background-color: #fa4eab;
+    }
+    .scroll-4::-webkit-scrollbar {
+      width: 15px;
+    }
+    .scroll-4::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+      background: #cccccc;
+      border-radius: 30px;
+    }
+    .scroll-4::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #3d0000, #950101, #ff0000);
+      border-radius: 30px;
+    }
+  </style>
+  <body>
+    <p>Custom ScrollBars</p>
+    <div class="container">
+      <div class="scrollbar scroll-1">
+        <div class="overflow"></div>
+      </div>
+      <div class="scrollbar scroll-2">
+        <div class="overflow"></div>
+      </div>
+      <div class="scrollbar scroll-3">
+        <div class="overflow"></div>
+      </div>
+      <div class="scrollbar scroll-4">
+        <div class="overflow"></div>
+      </div>
+    </div>
+  </body>
+</html>
